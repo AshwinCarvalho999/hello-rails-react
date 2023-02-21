@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  root 'root#index'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  get '/greeting', to: 'root#index' 
+  root 'message#index'
 
-  namespace :api do
-    namespace :v1 do
-      resources :messages, only: :index
-    end
-  end
+  get 'greeting/random', to: 'message#greeting' 
+  # Defines the root path route ("/")
+  # root "articles#index"
 end

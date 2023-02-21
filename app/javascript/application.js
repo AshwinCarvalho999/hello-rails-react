@@ -1,27 +1,20 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './components/App';
-import Greeting from './components/Greeting';
-import store from './redux/store';
+// Entry point for the build script in your package.json
+import React from "react";
+import ReactDOM from "react-dom";
+import "@hotwired/turbo-rails"
+import "./controllers"
+import App from "./App";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import Store from "./redux/Store";
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-  {
-    path: 'greeting',
-    element: <Greeting />,
-  },
-]);
-
-const root = createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
-  </React.StrictMode>
+ReactDOM.render(
+  <Provider store={Store}>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<App />} path="/" />
+      </Routes>
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById("root")
 );

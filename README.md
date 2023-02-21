@@ -142,7 +142,6 @@ If you like this project, kindly give it a star⭐️
 I would like to thank
 
 - Microverse
-- [David Übelacker](https://betterprogramming.pub/react-with-rails-2022-bd28e1fcd355#ad0a)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'message#index'
 
-  get 'greeting/random', to: 'message#greeting' 
+  # get 'greeting/random', to: 'message#greeting' 
   # Defines the root path route ("/")
   # root "articles#index"
 end
